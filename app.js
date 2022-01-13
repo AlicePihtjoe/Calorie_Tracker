@@ -4,7 +4,7 @@
 // item controller
 const ItemCtrl = (function(){
     // Item Constructor
-    const Item = function(id, name, calories) {
+    const Item = function(id, name, calories){
         this.id = id
         this.name = name
         this.calories = calories
@@ -36,6 +36,10 @@ const ItemCtrl = (function(){
 //UI Controller
 
     const UICtrl = (function(){
+        // UI Selectors
+        const UISelectors = {
+            itemList: '#item-list'
+        }
         return {
             populateItemList: function(items){
                 // create html content
@@ -46,13 +50,13 @@ const ItemCtrl = (function(){
                     html += `<li class="collection-item" id="item-${item.id}">
                     <strong>${item.name}: </strong> <em>${item.calories} Calories</em>
                     <a href="#" class="secondary-content">
-                    <i class=""edit-item fa fa-pencil"></i>
+                    <i class="edit-item fa fa-pencil"></i>
 </a>
 </li>`;
                 });
 
                 //insert list items
-                document.querySelector("#item-list").innerHTML = html;
+                document.querySelector(UIselectors.itemList).innerHTML = html;
             }
         }
     })();
