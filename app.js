@@ -465,7 +465,7 @@ const App = (function(ItemCtrl, StorageCtrl, UICtrl){
             if(items.length === 0){
                 UICtrl.hideList();
             } else {
-                // Populate list with items
+                // Populat list with items
                 UICtrl.populateItemList(items);
             }
 
